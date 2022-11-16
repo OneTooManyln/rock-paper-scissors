@@ -7,8 +7,11 @@
     <body>
             <!--Rock Paper scissors games played by user and computer.
             
-            When a user inputs either rock, papers, or scissors. A function
-            will randomly return rock, papers, or scissors.
+            When a user inputs either rock, papers, or scissors. The function
+            getComputerChoice will randomly return rock, papers, or scissors.
+
+            A function will play a single round of rock paper or scissors and will
+            take two parameters of the players and computers choice.
 
             If the computer wins then it should print "You lose! 'x' beats 'y'" 
             If the user wins, it should print "You win 'x' beats 'y'"           
@@ -17,26 +20,48 @@
         
             -->
 
+
+            <!-- Function to play a single round of rock paper and scissors
+            
+            The program will get an input from the user choosing either rps and
+            compare it with the computers choice determining a winner. It
+            would then output a string declaring a winner.
+            
+            'Input from user = x, input from computer = y'
+            
+            IF x > y,
+              return 'You Won! x beats y'
+            ELSE IF y > x
+              return 'You Lost! y beats x'
+            ELSE IF x == y 
+              return 'It's a Tie!   
+
+            -->
+
         <script>
             function getComputerChoice() {
                 let choice = Math.floor(Math.random()*3);
                 
                 if (choice === 0) {
-                    return 'Rock';
+                    return 'ROCK';
                 } else if (choice === 1) {
-                    return 'Paper';
+                    return 'PAPER';
                 } else if (choice === 2) {
-                    return 'Scissors';
+                    return 'SCISSORS';
                 }
                 } console.log(getComputerChoice())
 
 
-                function playRound(playerSelection, computerSelection) {
 
+                
+
+                function playRound(playerSelection, computerSelection) {
+                    ;
                 }
+
                 const playerSelection = 'rock';
                 const computerSelection = getComputerChoice();
-                console.log(playRound(playerSelection, computerSelection));
+                console.log(playerSelection.toUpperCase(), computerSelection);
 
 
         </script>

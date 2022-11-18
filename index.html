@@ -55,9 +55,15 @@
 
                 
 
-                function playRound(playerSelection, computerSelection) {
-                    ;
+            function playRound(playerSelection, computerSelection) {
+                switch (playRound) {
+                    case playerSelection === 'ROCK':
+                    case computerSelection === 'PAPER':
+                        return 'YOU WON! ROCK BEATS PAPER';
+                        break;
                 }
+                    console.log(playround('rock', computerSelection))
+            }
 
                 const playerSelection = 'rock';
                 const computerSelection = getComputerChoice();

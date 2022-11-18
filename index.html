@@ -59,15 +59,50 @@
                 switch (playRound) {
                     case playerSelection === 'ROCK':
                     case computerSelection === 'PAPER':
+                        return 'YOU LOST! PAPER BEATS ROCK';
+                        break;
+                        //
+                    case playerSelection === 'PAPER':
+                    case computerSelection === 'SCISSORS':
+                        return 'YOU LOST! SCISSORS BEATS PAPER';
+                        break;
+                    case playerSelection === 'SCISSORS':
+                    case computerSelection === 'ROCK':
+                        return 'YOU LOST! ROCK BEATS SCISSORS';
+                        break;
+                    case playerSelection === 'ROCK':
+                    case computerSelection === 'SCISSORS':
                         return 'YOU WON! ROCK BEATS PAPER';
                         break;
-                }
-                    console.log(playround('rock', computerSelection))
+                    case playerSelection === 'PAPER':
+                    case computerSelection === 'ROCK':
+                        return 'YOU WON! PAPER BEATS ROCK';
+                        break;
+                    case playerSelection === 'SCISSORS':
+                    case computerSelection === 'PAPER':
+                        return 'YOU WON! SCISSORS BEATS PAPER';
+                        break;
+                    case playerSelection === 'ROCK':
+                    case computerSelection === 'ROCK':
+                        return 'IT\'S A TIE!';
+                        break;
+                    case playerSelection === 'PAPER':
+                    case computerSelection === 'PAPER':
+                        return 'IT\S A TIE!';
+                        break;
+                    case playerSelection === 'SCISSORS':
+                    case computerSelection === 'SCISSORS':
+                        return 'IT\S A TIE!';
+                        break;
+                    default:
+                        return 'Wrong'
+                
+                }      
             }
 
                 const playerSelection = 'rock';
                 const computerSelection = getComputerChoice();
-                console.log(playerSelection.toUpperCase(), computerSelection);
+                console.log(playRound(playerSelection.toUpperCase(), computerSelection));
 
 
         </script>

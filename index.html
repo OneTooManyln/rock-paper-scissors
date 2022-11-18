@@ -55,54 +55,46 @@
 
                 
 
+
             function playRound(playerSelection, computerSelection) {
-                switch (playRound) {
-                    case playerSelection === 'ROCK':
-                    case computerSelection === 'PAPER':
+                switch (playerSelection, computerSelection) {
+                    case  ('ROCK', 'PAPER'):
                         return 'YOU LOST! PAPER BEATS ROCK';
                         break;
                         //
-                    case playerSelection === 'PAPER':
-                    case computerSelection === 'SCISSORS':
+                    case 'PAPER', 'SCISSORS':
                         return 'YOU LOST! SCISSORS BEATS PAPER';
                         break;
-                    case playerSelection === 'SCISSORS':
-                    case computerSelection === 'ROCK':
+                    case 'SCISSORS', 'ROCK':
                         return 'YOU LOST! ROCK BEATS SCISSORS';
                         break;
-                    case playerSelection === 'ROCK':
-                    case computerSelection === 'SCISSORS':
-                        return 'YOU WON! ROCK BEATS PAPER';
+                    case 'ROCK', 'SCISSORS':
+                        return 'YOU WON! ROCK BEATS SCISSORS';
                         break;
-                    case playerSelection === 'PAPER':
-                    case computerSelection === 'ROCK':
+                    case 'PAPER', 'ROCK':
                         return 'YOU WON! PAPER BEATS ROCK';
                         break;
-                    case playerSelection === 'SCISSORS':
-                    case computerSelection === 'PAPER':
+                    case 'SCISSORS', 'PAPER':
                         return 'YOU WON! SCISSORS BEATS PAPER';
                         break;
-                    case playerSelection === 'ROCK':
-                    case computerSelection === 'ROCK':
+                    case 'ROCK', 'ROCK':
                         return 'IT\'S A TIE!';
                         break;
-                    case playerSelection === 'PAPER':
-                    case computerSelection === 'PAPER':
+                    case 'PAPER', 'PAPER':
                         return 'IT\S A TIE!';
                         break;
-                    case playerSelection === 'SCISSORS':
-                    case computerSelection === 'SCISSORS':
+                    case 'SCISSORS', 'SCISSORS':
                         return 'IT\S A TIE!';
                         break;
                     default:
                         return 'Wrong'
-                
                 }      
             }
 
                 const playerSelection = 'rock';
                 const computerSelection = getComputerChoice();
-                console.log(playRound(playerSelection.toUpperCase(), computerSelection));
+                console.log(playRound(playerSelection, computerSelection));
+                
 
 
         </script>

@@ -79,9 +79,11 @@
                         return 'Wrong';
                 }      
             }
-                const playerSelection = 'rock';
+        
                 const computerSelection = getComputerChoice();
-                console.log(playRound(playerSelection.toUpperCase(), computerSelection));
+                let playerSelection = prompt('ROCK, PAPER, OR SCISSORS?')
+                playerSelection = playerSelection.toUpperCase();
+                console.log(playRound(playerSelection, computerSelection));
 
 // Write a new function to play a 5 round game and keep score, displaying a winner at the end
 // The function playRound will be called inside the function game
@@ -89,13 +91,6 @@
 
 
 
-                function game() {
-                    function playRound () {
-                        for (let i = 0; i < 5; i++) {
-
-                        }
-                    }
-                }
 
                 
 

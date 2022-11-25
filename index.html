@@ -55,25 +55,25 @@
             function playRound(playerSelection, computerSelection) {
                 switch (true) {
                     case (playerSelection === 'ROCK' && computerSelection === 'PAPER'):
-                        return 'YOU LOST! PAPER BEATS ROCK';
+                        return 'COMPUTER';
                         break;
                     case (playerSelection === 'PAPER' && computerSelection === 'SCISSORS'):
-                        return 'YOU LOST! SCISSORS BEATS PAPER';
+                        return 'COMPUTER';
                         break;
                     case (playerSelection === 'SCISSORS' && computerSelection === 'ROCK'):
-                        return 'YOU LOST! ROCK BEATS SCISSORS';
+                        return 'COMPUTER';
                         break;
                     case (playerSelection === 'ROCK' && computerSelection === 'SCISSORS'):
-                        return 'YOU WON! ROCK BEATS SCISSORS';
+                        return 'PLAYER';
                         break;
                     case (playerSelection === 'PAPER' && computerSelection === 'ROCK'):
-                        return 'YOU WON! PAPER BEATS ROCK';
+                        return 'PLAYER';
                         break;
                     case (playerSelection === 'SCISSORS' && computerSelection === 'PAPER'):
-                        return 'YOU WON! SCISSORS BEATS PAPER';
+                        return 'PLAYER';
                         break;
                     case (playerSelection === computerSelection):
-                        return 'IT\'S A TIE!';
+                        return 'TIE';
                         break;
                     default:
                         return 'Wrong';
@@ -90,9 +90,31 @@
 // inside playRound a for-loop will be used
 
 
+                let playerPoints = 0;
+                let computerPoints = 0;
 
+                function game () {
 
-                
+                    let result = playRound(playerSelection, computerSelection);
+
+                    for (let i = 0; i < 5; i++) {
+                        if (result === 'PLAYER') {
+                           playerPoints++;
+                        } else if (result === 'COMPUTER') {
+                            computerPoints++;
+                        } else {
+                           console.log(i);
+                        }
+                    }
+                        if (playerPoints === 5) {
+                            return 'YOU WON!';
+                        } else {
+                            return 'YOU LOST!';
+                        }
+                    
+                }
+
+                console.log(game())
 
         </script>
     </body>

@@ -3,120 +3,35 @@
     <head>
         <meta charset="UTF+8">
         <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="style.css">
+        <script src = "rps.js" defer></script>
     </head>
+
     <body>
-            <!--Rock Paper scissors games played by user and computer.
-            
-            When a user inputs either rock, papers, or scissors. The function
-            getComputerChoice will randomly return rock, papers, or scissors.
-
-            A function will play a single round of rock paper or scissors and will
-            take two parameters of the players and computers choice.
-
-            If the computer wins then it should print "You lose! 'x' beats 'y'" 
-            If the user wins, it should print "You win 'x' beats 'y'"           
+        <div id = "btns">
+            <button data-choice="ROCK" id = "btn"> <!--changed from <button class = 'rock'>-->
+                <p>Rock</p>
+            </button>
+            <button data-choice="PAPER" id = "btn">
+                <p>Paper</p>
+            </button>
+            <button data-choice="SCISSORS" id = "btn">
+                <p>scissors</p>
+            </button>
+        </div>
+        <!--<div class = "results">
+            <div class ="computer"></div> <--changed from <div data-result="COMPUTER" class="result">
+            <div class ="player"></div>
+            <div class ="tie"></div>
+        </div>-->
         
-            The users input should be case-insensitive
-        
-            -->
-
-
-            <!-- Function to play a single round of rock paper and scissors
-            
-            The program will get an input from the user choosing either rps and
-            compare it with the computers choice determining a winner. It
-            would then output a string declaring a winner.
-            
-            'Input from user = x, input from computer = y'
-            
-            IF x > y,
-              return 'You Won! x beats y'
-            ELSE IF y > x
-              return 'You Lost! y beats x'
-            ELSE IF x == y 
-              return 'It's a Tie!   
-
-            -->
-
-        <script>
-            function getComputerChoice() {
-                let choice = Math.floor(Math.random()*3);
-                
-                if (choice === 0) {
-                    return 'ROCK';
-                } else if (choice === 1) {
-                    return 'PAPER';
-                } else if (choice === 2) {
-                    return 'SCISSORS';
-                }
-                } console.log(getComputerChoice())
-
-                
-            function playRound(playerSelection, computerSelection) {
-                switch (true) {
-                    case (playerSelection === 'ROCK' && computerSelection === 'PAPER'):
-                        return 'COMPUTER';
-                        break;
-                    case (playerSelection === 'PAPER' && computerSelection === 'SCISSORS'):
-                        return 'COMPUTER';
-                        break;
-                    case (playerSelection === 'SCISSORS' && computerSelection === 'ROCK'):
-                        return 'COMPUTER';
-                        break;
-                    case (playerSelection === 'ROCK' && computerSelection === 'SCISSORS'):
-                        return 'PLAYER';
-                        break;
-                    case (playerSelection === 'PAPER' && computerSelection === 'ROCK'):
-                        return 'PLAYER';
-                        break;
-                    case (playerSelection === 'SCISSORS' && computerSelection === 'PAPER'):
-                        return 'PLAYER';
-                        break;
-                    case (playerSelection === computerSelection):
-                        return 'TIE';
-                        break;
-                    default:
-                        return 'Wrong';
-                }      
-            }
-        
-                const computerSelection = getComputerChoice();
-                let playerSelection = prompt('ROCK, PAPER, OR SCISSORS?')
-                playerSelection = playerSelection.toUpperCase();          
-              //  console.log(playRound(playerSelection, computerSelection));
-
-// Write a new function to play a 5 round game and keep score, displaying a winner at the end
-// The function playRound will be called inside the function game
-// inside playRound a for-loop will be used
-
-
-                let playerPoints = 0;
-                let computerPoints = 0;
-
-                function game() {
-                    
-                    let result = playRound(playerSelection, computerSelection);
-                    
-
-                    for (let i = 0; i < 5; i++) {
-                        if (result === 'PLAYER') {
-                           playerPoints++;
-                        } else if (result === 'COMPUTER') {
-                            computerPoints++;
-                        } else {
-                           console.log(i);
-                        }
-                    }
-                        if (playerPoints === 5) {
-                            return 'YOU WON!';
-                        } else {
-                            return 'YOU LOST!';
-                        }
-                    
-                }
-
-                console.log(game())
-
-        </script>
+        <!--<div class = "winners">
+            <div class = "playerwins">
+                <h3>PLAYER WINS</h3>
+            </div>
+            <div class = "computerwins">
+                <h3>COMPUTER WINS</h3>
+            </div>
+        </div> -->
     </body>
 </html>

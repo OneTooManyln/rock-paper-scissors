@@ -1,0 +1,74 @@
+body {
+    background-color: rgb(58, 58, 58);
+    margin: 0;
+    padding: 0;
+}
+
+#btns {
+    display: flex;
+    flex: 1;
+    min-height: 20vh;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 5rem;
+}
+
+.results {
+    display: flex;
+    flex: 1;
+    min-height: 20vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.winners {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.computerWins,
+.playerWins {
+    border-radius: .8rem;
+    border: .25rem solid rgb(199, 197, 197);
+    margin: 1rem;
+    width: 40rem;
+    text-align: center;
+    background: rgb(22, 22, 22);
+}
+
+#btn {
+    border : .3rem solid rgb(199, 197, 197);
+    border-radius: .5rem;
+    width: 10rem;
+    margin: 1rem;
+    padding: 1rem .5 rem;
+    text-align: center;
+    justify-content: center;
+    background: rgb(22, 22, 22);
+    text-shadow: 0 0 .5rem black;
+}
+
+.computer,
+.player,
+.tie {
+    border-radius: .5rem;
+    border : .4rem solid black;
+    width: 20rem;
+    margin: 1rem;
+    padding: 1rem .5rem;
+    text-align: center;
+    background: white;
+}
+
+p {
+    font-weight: bold;
+    color: white;
+    font-size: 2rem;
+}
+
+h3 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
